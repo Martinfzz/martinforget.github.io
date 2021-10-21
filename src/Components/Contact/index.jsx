@@ -1,32 +1,49 @@
-import React, { useRef } from 'react';
-// import emailjs, { init } from 'emailjs-com';
+import React, { useRef, useState } from 'react';
+import emailjs, { init } from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { Spin } from 'antd';
+import { LoadingOutlined } from '@ant-design/icons';
 import UiManager from '../../services';
 
-// init(process.env.REACT_APP_USER_ID);
+init(process.env.REACT_APP_USER_ID);
+const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
 const Contact = () => {
   const form = useRef();
+  const [isSend, setIsSend] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    console.log(form.current.user_name.value);
-
-    UiManager.openNotification(
-      'warning',
-      'Les deux mots de passe ne sont pas identiques 😉',
-    );
-
-    // emailjs.sendForm(
-    //   process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current,
-    // )
-    //   .then((result) => {
-    //     console.log(result.text);
-    //   }, (error) => {
-    //     console.log(error.text);
-    //   });
+    if (form.current.user_name.value.length === 0
+      || form.current.user_email.value.length === 0
+      || form.current.message.value.length === 0) {
+      setIsSend(true);
+      UiManager.openNotification(
+        'error',
+        'Validation errors. All fields must be filled 😣',
+      );
+      setIsSend(false);
+    } else {
+      setIsSend(true);
+      emailjs.sendForm(
+        process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current,
+      )
+        .then(() => {
+          setIsSend(false);
+          form.current.user_name.value = '';
+          form.current.user_email.value = '';
+          form.current.message.value = '';
+          UiManager.openNotification(
+            'success',
+            'Message send, you will receive an answer soon 😃',
+          );
+        }, (error) => {
+          setIsSend(true);
+          console.log(error.text);
+        });
+    }
   };
 
   return (
@@ -63,7 +80,7 @@ const Contact = () => {
 
                       <div className="col-span-6 sm:col-span-6">
                         <input
-                          type="text"
+                          type="email"
                           name="user_email"
                           id="user_email"
                           autoComplete="email"
@@ -85,11 +102,13 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="px-4 py-3 bg-white text-right sm:px-6">
+                    {isSend && <span className="pr-3"><Spin indicator={antIcon} style={{ color: '#B91C1C' }} /></span>}
                     <button
                       type="submit"
+                      disabled={isSend}
                       className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     >
-                      Save
+                      Send
                     </button>
                   </div>
                 </div>
