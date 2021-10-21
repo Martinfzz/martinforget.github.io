@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
-import emailjs, { init } from 'emailjs-com';
+// import emailjs, { init } from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import UiManager from '../../services';
 
-init(process.env.REACT_APP_USER_ID);
+// init(process.env.REACT_APP_USER_ID);
 
 const Contact = () => {
   const form = useRef();
@@ -11,14 +12,21 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current,
-    )
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
+    console.log(form.current.user_name.value);
+
+    UiManager.openNotification(
+      'warning',
+      'Les deux mots de passe ne sont pas identiques 😉',
+    );
+
+    // emailjs.sendForm(
+    //   process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current,
+    // )
+    //   .then((result) => {
+    //     console.log(result.text);
+    //   }, (error) => {
+    //     console.log(error.text);
+    //   });
   };
 
   return (
