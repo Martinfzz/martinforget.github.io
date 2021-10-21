@@ -49,7 +49,7 @@ const Contact = () => {
   return (
     <>
       <div>
-        <div className="mt-10 sm:mt-0 sm:px-3 bg-red-400 py-20">
+        <div className="sm:mt-0 sm:px-3 bg-red-400 py-20">
           <div className="md:grid md:grid-cols-6 md:gap-6 container mx-auto">
             <div className="md:col-start-2 md:col-end-4">
               <div className="px-4 sm:px-0">
