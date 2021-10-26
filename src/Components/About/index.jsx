@@ -3,8 +3,18 @@ import SkillBar from 'react-skillbars';
 
 const skills = [
   {
-    type: 'Java',
-    level: 85,
+    type: 'HTML',
+    level: 90,
+    color: {
+      bar: '#DC7633',
+      title: {
+        background: '#D35400',
+      },
+    },
+  },
+  {
+    type: 'CSS',
+    level: 80,
     color: {
       bar: '#3498db',
       title: {
@@ -12,7 +22,66 @@ const skills = [
       },
     },
   },
-  { type: 'Javascript', level: 75 },
+  {
+    type: 'Javascript',
+    level: 80,
+    color: {
+      bar: '#F4D03F',
+      title: {
+        background: '#F4D03F',
+      },
+    },
+  },
+  {
+    type: 'Ruby/Rails',
+    level: 75,
+    color: {
+      bar: '#CD6155',
+      title: {
+        background: '#C0392B',
+      },
+    },
+  },
+  {
+    type: 'React',
+    level: 75,
+    color: {
+      bar: '#5D6D7E',
+      title: {
+        background: '#34495E',
+      },
+    },
+  },
+  {
+    type: 'MongoDB',
+    level: 50,
+    color: {
+      bar: '#52BE80',
+      title: {
+        background: '#27AE60',
+      },
+    },
+  },
+  {
+    type: 'ReactNative',
+    level: 40,
+    color: {
+      bar: '#3498db',
+      title: {
+        background: '#2980b9',
+      },
+    },
+  },
+  {
+    type: 'TypeScript',
+    level: 40,
+    color: {
+      bar: '#2471A3',
+      title: {
+        background: '#1F618D',
+      },
+    },
+  },
 ];
 
 const About = () => (
@@ -30,7 +99,7 @@ const About = () => (
             {' '}
             accusamus quisquam.
           </p>
-          <SkillBar skills={skills} />
+          <SkillBar skills={skills} animationDelay={500} />
         </div>
       </div>
     </div>
