@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 const Navbar = () => (
-  <Popover className="relative bg-white sticky top-0 z-50">
+  <Popover className="relative bg-white sticky top-0 z-40">
     <div className="max-w-7xl mx-auto px-4 sm:px-6">
       <div className="flex justify-between items-center py-6 md:space-x-10">
         <div className="flex justify-start lg:w-0 lg:flex-1">
