@@ -2,15 +2,10 @@ import React, { Fragment } from 'react';
 import { PropTypes } from 'prop-types';
 import { Dialog, Transition } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
-import { StarIcon } from '@heroicons/react/solid';
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
 
 const Project = ({ data, open, setOpen }) => (
   <Transition.Root show={open} as={Fragment}>
-    <Dialog as="div" className="fixed z-10 inset-0 overflow-y-auto" onClose={setOpen}>
+    <Dialog as="div" className="fixed z-50 inset-0 overflow-y-auto" onClose={setOpen}>
       <div className="flex min-h-screen text-center md:block md:px-2 lg:px-4" style={{ fontSize: 0 }}>
         <Transition.Child
           as={Fragment}
@@ -24,7 +19,6 @@ const Project = ({ data, open, setOpen }) => (
           <Dialog.Overlay className="hidden fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity md:block" />
         </Transition.Child>
 
-        {/* This element is to trick the browser into centering the modal contents. */}
         <span className="hidden md:inline-block md:align-middle md:h-screen" aria-hidden="true">
           &#8203;
         </span>
@@ -60,42 +54,22 @@ const Project = ({ data, open, setOpen }) => (
                       data information
                     </h3>
 
-                    <p className="text-2xl text-gray-900">{data.price}</p>
-
-                    {/* Reviews */}
-                    <div className="mt-6">
-                      <h4 className="sr-only">Reviews</h4>
-                      <div className="flex items-center">
-                        <div className="flex items-center">
-                          {[0, 1, 2, 3, 4].map((rating) => (
-                            <StarIcon
-                              key={rating}
-                              className={classNames(
-                                data.rating > rating ? 'text-gray-900' : 'text-gray-200',
-                                'h-5 w-5 flex-shrink-0',
-                              )}
-                              aria-hidden="true"
-                            />
-                          ))}
-                        </div>
-                        <p className="sr-only">
-                          {data.rating}
-                          {' '}
-                          out of 5 stars
-                        </p>
-                        <a href="#a" className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                          {data.reviewCount}
-                          reviews
-                        </a>
-                      </div>
-                    </div>
+                    <p className="text-lg text-gray-900">{data.longDescription}</p>
+                    <p className="text-lg text-gray-900">
+                      Technologies:
+                      {' '}
+                      {data.technologies}
+                    </p>
                   </section>
 
-                  <section aria-labelledby="options-heading" className="mt-10">
-                    <h3 id="options-heading" className="sr-only">
-                      data options
-                    </h3>
-                  </section>
+                  <a target="_blank" rel="noreferrer" href={data.href} className="text-sm font-medium">
+                    <button
+                      type="submit"
+                      className="mt-6 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    >
+                      Website
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
