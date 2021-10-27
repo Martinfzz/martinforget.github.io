@@ -9,4 +9,7 @@
   .navbar-link-dropdown {
     @apply text-base font-medium text-white hover:text-yellow-700 font-semibold
   }
+  .active {
+    @apply text-base font-medium text-yellow-700 font-semibold
+  }
 }
