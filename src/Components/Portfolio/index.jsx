@@ -55,12 +55,13 @@ const Portfolio = () => {
 
   return (
     <>
-      <div className="bg-gray-100">
+      <div className="bg-gray-100" id="portfolio">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none">
-            <h2 className="text-2xl font-extrabold text-gray-900">Portfolio</h2>
+          <div className="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none text-center">
+            <h2 className="text-4xl font-extrabold text-gray-900 uppercase">Portfolio</h2>
+            <p className="text-xl text-gray-500 mt-10">You will find below some of my works with explainations of what you can do and witch technologies I used.</p>
 
-            <div className="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-6">
+            <div className="mt-20 space-y-20 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:gap-y-20">
               {projects.map((project) => (
                 <div key={project.name} className="group relative">
                   <div className="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">

@@ -1,87 +1,32 @@
 nav {
-    & .navbar-link {
-      position: relative;
-      &:after {
-        content: '';
-        height: 2px;
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        width: 0%;
-        background-color: #DC2626;
-        transition: 0.2s;
-      }
-      &:hover:after {
-        width: 100%;
-      }
+  & .navbar-link {
+    position: relative;
+    &:after {
+      content: '';
+      height: 2px;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 0%;
+      background-color: #B45309;
+      transition: 0.2s;
     }
-}
-
-@media (max-width:850px) {
-  nav div {
-    & h1 a {
-      padding-right: 20px;
-    }
-    & div form {
-      min-width: 250px;
-      padding-right: 50px;
+    &:hover:after {
+      width: 100%;
     }
   }
 
-  .nav {
-    & .nav-btn {
-      display: block;
+  & .active {
+    color: #B45309;
+    &:after {
+      content: '';
+      height: 2px;
       position: absolute;
-      right: 15px;
-      top: 5px;
-      width: 50px;
-      
-      & label {
-        display: block;
-        width: 50px;
-        height: 50px;
-        &:hover > span {
-          border-color: $tertiary-color;
-        }
-        & span {
-        display: block;
-        width: 25px;
-        height: 10px;
-        border-top: 3.5px solid $primary-color;
-        }
-      }
-    }
-
-    & ul {
-      top: 75px;
-      right: 40px;
-      width: 12em;
-      display: block;
-      position: absolute;
-      flex-direction: column;
-      text-align: left;
-      background-color: $primary-color;
-      transition: all 0.3s ease-in;
-      overflow-y: hidden;
-      & a {
-        color: white;
-      }
-    }
-
-    & #nav-check:not(:checked) ~ ul {
-      height: 0px;
-    }
-
-    & #nav-check:checked ~ ul {
-      height: 5em;
-      overflow-y: auto;
-    }
-  }
-}
-@media (max-width:480px) {
-  nav div {
-    & div form {
-      padding-right: 0;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      background-color: #B45309;
+      transition: 0.2s;
     }
   }
 }

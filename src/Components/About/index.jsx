@@ -85,15 +85,15 @@ const skills = [
 ];
 
 const About = () => (
-  <div className="py-12 bg-white">
+  <div className="bg-white" id="about">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="lg:text-center">
-        <h2 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl uppercase">About Me</h2>
-        <div className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-          <p>
-            I&apos;m a Fulstack web developper.
+      <div className="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none text-center">
+        <h2 className="text-4xl font-extrabold text-gray-900 uppercase">About Me</h2>
+        <div className="mt-10 max-w-2xl text-xl text-gray-500 mx-auto">
+          <p className="mb-20">
+            I&apos;m a Fullstack web developper.
             {' '}
-            I work for few years into aeronautical engineering field
+            I worked for few years into aeronautical engineering field
             {' '}
             Possimus magnam voluptatum cupiditate veritatis in
             {' '}

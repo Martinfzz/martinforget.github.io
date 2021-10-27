@@ -54,8 +54,8 @@ const Project = ({ data, open, setOpen }) => (
                       data information
                     </h3>
 
-                    <p className="text-lg text-gray-900">{data.longDescription}</p>
-                    <p className="text-lg text-gray-900">
+                    <p className="text-lg text-gray-500">{data.longDescription}</p>
+                    <p className="text-lg text-gray-500">
                       Technologies:
                       {' '}
                       {data.technologies}
@@ -65,7 +65,7 @@ const Project = ({ data, open, setOpen }) => (
                   <a target="_blank" rel="noreferrer" href={data.href} className="text-sm font-medium">
                     <button
                       type="submit"
-                      className="mt-6 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      className="uppercase mt-6 w-full bg-yellow-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:text-white hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
                     >
                       Website
                     </button>
