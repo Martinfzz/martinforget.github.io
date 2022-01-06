@@ -1,5 +1,5 @@
 import React from 'react';
-// import Profile_picture from "src/assets/images/profile_picture.jpg";
+import { Link } from 'react-scroll';
 import Profilepicture from '../../assets/images/profile_picture.jpg';
 
 const Hero = () => (
@@ -32,12 +32,9 @@ const Hero = () => (
             </p>
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div className="rounded-md shadow">
-                <a
-                  href="#portfolio"
-                  className="uppercase w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white hover:text-white bg-yellow-600 hover:bg-yellow-700 md:py-4 md:text-lg md:px-10"
-                >
+                <Link className="uppercase w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white hover:text-white bg-yellow-600 hover:bg-yellow-700 md:py-4 md:text-lg md:px-10" activeClass="active" to="portfolio" spy smooth duration={0}>
                   See my work
-                </a>
+                </Link>
               </div>
             </div>
           </div>

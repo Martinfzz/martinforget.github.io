@@ -57,8 +57,8 @@ const Contact = () => {
               <p className="mt-1 text-lg text-gray-500">If you want to be part of an adventure with me or if you simply have a question, send me a message.</p>
               <p className="mt-1 text-lg text-gray-500">You can also find me here:</p>
               <div className="flex justify-center my-3">
-                <a href="https://github.com/Martinfzz" className="mt-1 text-4xl text-gray-500 mr-10 hover:text-yellow-700" aria-label="Github logo"><FontAwesomeIcon icon={faGithub} /></a>
-                <a href="https://www.linkedin.com/in/martin-forget7" className="mt-1 text-4xl text-gray-500 hover:text-yellow-700" aria-label="LinkedIn logo"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+                <a href="https://github.com/Martinfzz" className="mt-1 text-4xl text-gray-500 mr-10 hover:text-yellow-700" aria-label="Github logo" rel="noreferrer" target="_blank"><FontAwesomeIcon icon={faGithub} /></a>
+                <a href="https://www.linkedin.com/in/martin-forget7" className="mt-1 text-4xl text-gray-500 hover:text-yellow-700" aria-label="LinkedIn logo" rel="noreferrer" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} /></a>
               </div>
             </div>
           </div>

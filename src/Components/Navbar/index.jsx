@@ -30,17 +30,17 @@ const Navbar = () => {
               </Popover.Button>
             </div>
             <Popover.Group as="nav" className="hidden sm:flex space-x-10 items-center">
-              <Link className="navbar-link" activeClass="active" to="portfolio" spy smooth duration={500}>
+              <Link className="navbar-link" activeClass="active" to="portfolio" spy smooth duration={0}>
                 Portfolio
               </Link>
-              <Link className="navbar-link" activeClass="active" to="about" spy smooth duration={500}>
+              <Link className="navbar-link" activeClass="active" to="about" spy smooth duration={0}>
                 About
               </Link>
-              <Link className="navbar-link" activeClass="active" to="contact" spy smooth duration={500}>
+              <Link className="navbar-link" activeClass="active" to="contact" spy smooth duration={0}>
                 Contact
               </Link>
-              <a href="https://github.com/Martinfzz" className="mt-1 text-4xl text-white mr-10 hover:text-yellow-700" aria-label="Github logo"><FontAwesomeIcon icon={faGithub} /></a>
-              <a href="https://www.linkedin.com/in/martin-forget7" className="mt-1 text-4xl text-white hover:text-yellow-700" aria-label="LinkedIn logo"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+              <a href="https://github.com/Martinfzz" className="mt-1 text-4xl text-white mr-10 hover:text-yellow-700" aria-label="Github logo" rel="noreferrer" target="_blank"><FontAwesomeIcon icon={faGithub} /></a>
+              <a href="https://www.linkedin.com/in/martin-forget7" className="mt-1 text-4xl text-white hover:text-yellow-700" aria-label="LinkedIn logo" rel="noreferrer" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} /></a>
             </Popover.Group>
           </div>
         </div>
@@ -59,7 +59,7 @@ const Navbar = () => {
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
                   <div>
-                    <a href="#z" className="text-base font-medium text-white">MartinF</a>
+                    <button type="button" onClick={handleOnClick} className="text-base font-medium text-white">MartinF</button>
                   </div>
                   <div className="-mr-2">
                     <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500">
@@ -71,13 +71,13 @@ const Navbar = () => {
               </div>
               <div className="py-6 px-5 space-y-6">
                 <div className="grid grid-cols-3 gap-y-4 gap-x-8">
-                  <Link className="navbar-link-dropdown" activeClass="active" to="portfolio" spy smooth duration={500}>
+                  <Link className="navbar-link-dropdown" activeClass="active" to="portfolio" spy smooth duration={0}>
                     Portfolio
                   </Link>
-                  <Link className="navbar-link-dropdown" activeClass="active" to="about" spy smooth duration={500}>
+                  <Link className="navbar-link-dropdown" activeClass="active" to="about" spy smooth duration={0}>
                     About
                   </Link>
-                  <Link className="navbar-link-dropdown" activeClass="active" to="contact" spy smooth duration={500}>
+                  <Link className="navbar-link-dropdown" activeClass="active" to="contact" spy smooth duration={0}>
                     Contact
                   </Link>
                   <a href="https://github.com/Martinfzz" className="mt-1 text-3xl text-white mr-10" aria-label="Github logo"><FontAwesomeIcon icon={faGithub} /></a>
