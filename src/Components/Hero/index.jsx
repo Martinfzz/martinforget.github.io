@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import Profilepicture from '../../assets/images/profile_picture.jpg';
 
-const Hero = () => (
+// eslint-disable-next-line react/prop-types
+const Hero = ({ t }) => (
   <div className="relative bg-white overflow-hidden">
     <div className="max-w-7xl mx-auto">
       <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-xl lg:w-1/2 xl:max-w-3xl xl:w-full 2xl:max-w-4xl lg:pb-28 xl:pb-32">
@@ -26,9 +27,7 @@ const Hero = () => (
               Martin Forget
             </h1>
             <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-              I&apos;m a Fullstack web developper. I&apos;ll create
-              {' '}
-              the website of your dreams.
+              {t('I&apos;m a Fullstack web developper. I&apos;ll create the website of your dreams.')}
             </p>
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div className="rounded-md shadow">

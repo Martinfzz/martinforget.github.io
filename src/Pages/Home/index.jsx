@@ -4,9 +4,10 @@ import Portfolio from '../../Components/Portfolio';
 import About from '../../Components/About';
 import Contact from '../../Components/Contact';
 
-const Home = () => (
+// eslint-disable-next-line react/prop-types
+const Home = ({ t }) => (
   <>
-    <Hero />
+    <Hero t={t} />
     <Portfolio />
     <About />
     <Contact />

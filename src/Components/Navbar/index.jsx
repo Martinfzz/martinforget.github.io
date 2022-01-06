@@ -5,10 +5,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-scroll';
 import Logo from '../../assets/images/Martin_Forget_logo.png';
+import i18n from '../../i18n';
 
-const Navbar = () => {
+// eslint-disable-next-line react/prop-types
+const Navbar = ({ t }) => {
   const handleOnClick = () => {
     window.scrollTo(0, 0);
+  };
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
   };
 
   return (
@@ -26,6 +32,11 @@ const Navbar = () => {
               </button>
 
             </div>
+            <div>
+              <button type="button" className="text-gray-400" onClick={() => changeLanguage('fr')}>fr</button>
+              <button type="button" className="text-gray-400" onClick={() => changeLanguage('en')}>en</button>
+              <h1 className="text-gray-400">{t('Welcome to React')}</h1>
+            </div>
             <div className="-mr-2 -my-2 sm:hidden">
               <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-yellow-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500">
                 <span className="sr-only">Open menu</span>
@@ -37,7 +48,7 @@ const Navbar = () => {
                 Portfolio
               </Link>
               <Link className="navbar-link" activeClass="active" to="about" spy smooth duration={0}>
-                About
+                {t('About')}
               </Link>
               <Link className="navbar-link" activeClass="active" to="contact" spy smooth duration={0}>
                 Contact
