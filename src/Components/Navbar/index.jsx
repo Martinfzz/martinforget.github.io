@@ -11,12 +11,23 @@ import i18n from '../../i18n';
 const Navbar = ({ t }) => {
   const [frToogle, setFrToggle] = useState(false);
   const [enToogle, setEnToggle] = useState(true);
+  const [language, setLanguage] = useState(localStorage.getItem('language') || 'en');
+
+  React.useEffect(() => {
+    localStorage.setItem('language', language);
+    i18n.changeLanguage(language);
+    if (language === 'fr') {
+      setFrToggle(true);
+      setEnToggle(false);
+    }
+  }, [language]);
 
   const handleOnClick = () => {
     window.scrollTo(0, 0);
   };
 
   const changeLanguage = (lng) => {
+    setLanguage(lng);
     i18n.changeLanguage(lng);
     setFrToggle(!frToogle);
     setEnToggle(!enToogle);

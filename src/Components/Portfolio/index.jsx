@@ -44,7 +44,8 @@ const projects = [
   },
 ];
 
-const Portfolio = () => {
+// eslint-disable-next-line react/prop-types
+const Portfolio = ({ t }) => {
   const [open, setOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(1);
 
@@ -59,7 +60,7 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none text-center">
             <h2 className="text-4xl font-extrabold text-gray-900 uppercase">Portfolio</h2>
-            <p className="text-xl text-gray-500 mt-10">You will find below some of my works with explainations of what you can do and witch technologies I used.</p>
+            <p className="text-xl text-gray-500 mt-10">{t('You will find below some of my works with explainations of what you can do and witch technologies I used.')}</p>
 
             <div className="mt-20 space-y-20 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:gap-y-20">
               {projects.map((project) => (
