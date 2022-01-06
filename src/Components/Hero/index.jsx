@@ -28,7 +28,7 @@ const Hero = () => (
             <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
               I&apos;m a Fullstack web developper. I&apos;ll create
               {' '}
-              or recreate the website of your dreams.
+              the website of your dreams.
             </p>
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div className="rounded-md shadow">

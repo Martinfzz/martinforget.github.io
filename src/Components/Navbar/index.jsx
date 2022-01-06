@@ -4,6 +4,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-scroll';
+import Logo from '../../assets/images/Martin_Forget_logo.png';
 
 const Navbar = () => {
   const handleOnClick = () => {
@@ -16,12 +17,14 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center py-6 md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
-              <button type="button" onClick={handleOnClick} className="text-base font-medium text-white hover:text-yellow-700">MartinF</button>
-              {/* <img
-                className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                alt=""
-              /> */}
+              <button type="button" onClick={handleOnClick} className="text-base font-medium text-white hover:text-yellow-700">
+                <img
+                  className="h-8 w-auto h-16"
+                  src={Logo}
+                  alt=""
+                />
+              </button>
+
             </div>
             <div className="-mr-2 -my-2 sm:hidden">
               <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-yellow-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500">

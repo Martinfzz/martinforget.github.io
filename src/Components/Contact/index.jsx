@@ -48,7 +48,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="mt-8 sm:px-3 bg-gray-100 py-20" id="contact">
+      <div className="mt-8 sm:px-3 bg-gray-100 py-20 sm:py-60" id="contact">
         <h2 className="mt-2 text-4xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl uppercase text-center">Contact</h2>
         <div className="md:grid md:grid-cols-6 md:gap-6 container mx-auto">
           <div className="md:col-start-2 md:col-end-4 mt-8">
