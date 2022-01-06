@@ -48,7 +48,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="mt-8 sm:px-3 bg-gray-100 py-20" id="contact">
+      <div className="mt-8 sm:px-3 bg-gray-100 py-20 sm:py-60" id="contact">
         <h2 className="mt-2 text-4xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl uppercase text-center">Contact</h2>
         <div className="md:grid md:grid-cols-6 md:gap-6 container mx-auto">
           <div className="md:col-start-2 md:col-end-4 mt-8">
@@ -57,8 +57,8 @@ const Contact = () => {
               <p className="mt-1 text-lg text-gray-500">If you want to be part of an adventure with me or if you simply have a question, send me a message.</p>
               <p className="mt-1 text-lg text-gray-500">You can also find me here:</p>
               <div className="flex justify-center my-3">
-                <a href="https://github.com/Martinfzz" className="mt-1 text-4xl text-gray-500 mr-10 hover:text-yellow-700" aria-label="Github logo"><FontAwesomeIcon icon={faGithub} /></a>
-                <a href="https://www.linkedin.com/in/martin-forget7" className="mt-1 text-4xl text-gray-500 hover:text-yellow-700" aria-label="LinkedIn logo"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+                <a href="https://github.com/Martinfzz" className="mt-1 text-4xl text-gray-500 mr-10 hover:text-yellow-700" aria-label="Github logo" rel="noreferrer" target="_blank"><FontAwesomeIcon icon={faGithub} /></a>
+                <a href="https://www.linkedin.com/in/martin-forget7" className="mt-1 text-4xl text-gray-500 hover:text-yellow-700" aria-label="LinkedIn logo" rel="noreferrer" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} /></a>
               </div>
             </div>
           </div>
