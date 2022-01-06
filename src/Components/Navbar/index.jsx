@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,12 +9,17 @@ import i18n from '../../i18n';
 
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ t }) => {
+  const [frToogle, setFrToggle] = useState(false);
+  const [enToogle, setEnToggle] = useState(true);
+
   const handleOnClick = () => {
     window.scrollTo(0, 0);
   };
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
+    setFrToggle(!frToogle);
+    setEnToggle(!enToogle);
   };
 
   return (
@@ -30,12 +35,6 @@ const Navbar = ({ t }) => {
                   alt=""
                 />
               </button>
-
-            </div>
-            <div>
-              <button type="button" className="text-gray-400" onClick={() => changeLanguage('fr')}>fr</button>
-              <button type="button" className="text-gray-400" onClick={() => changeLanguage('en')}>en</button>
-              <h1 className="text-gray-400">{t('Welcome to React')}</h1>
             </div>
             <div className="-mr-2 -my-2 sm:hidden">
               <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-yellow-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500">
@@ -55,6 +54,10 @@ const Navbar = ({ t }) => {
               </Link>
               <a href="https://github.com/Martinfzz" className="mt-1 text-4xl text-white mr-10 hover:text-yellow-700" aria-label="Github logo" rel="noreferrer" target="_blank"><FontAwesomeIcon icon={faGithub} /></a>
               <a href="https://www.linkedin.com/in/martin-forget7" className="mt-1 text-4xl text-white hover:text-yellow-700" aria-label="LinkedIn logo" rel="noreferrer" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+              <div>
+                <button type="button" id="fr" className={`navbar-link mr-2 ${frToogle ? 'active' : ''}`} onClick={() => changeLanguage('fr')}>fr</button>
+                <button type="button" id="en" className={`navbar-link ${enToogle ? 'active' : ''}`} onClick={() => changeLanguage('en')}>en</button>
+              </div>
             </Popover.Group>
           </div>
         </div>
@@ -96,6 +99,10 @@ const Navbar = ({ t }) => {
                   </Link>
                   <a href="https://github.com/Martinfzz" className="mt-1 text-3xl text-white mr-10" aria-label="Github logo"><FontAwesomeIcon icon={faGithub} /></a>
                   <a href="https://www.linkedin.com/in/martin-forget7" className="mt-1 text-3xl text-white" aria-label="LinkedIn logo"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+                  <div>
+                    <button type="button" id="fr" className={`navbar-link-dropdown mr-2 ${frToogle ? 'active' : ''}`} onClick={() => changeLanguage('fr')}>fr</button>
+                    <button type="button" id="en" className={`navbar-link-dropdown ${enToogle ? 'active' : ''}`} onClick={() => changeLanguage('en')}>en</button>
+                  </div>
                 </div>
               </div>
             </div>

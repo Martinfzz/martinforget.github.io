@@ -27,12 +27,12 @@ const Hero = ({ t }) => (
               Martin Forget
             </h1>
             <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-              {t('I&apos;m a Fullstack web developper. I&apos;ll create the website of your dreams.')}
+              {t("I'm a Fullstack web developper. I'll create the website of your dreams.")}
             </p>
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div className="rounded-md shadow">
                 <Link className="uppercase w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white hover:text-white bg-yellow-600 hover:bg-yellow-700 md:py-4 md:text-lg md:px-10" activeClass="active" to="portfolio" spy smooth duration={0}>
-                  See my work
+                  {t('See my work')}
                 </Link>
               </div>
             </div>
