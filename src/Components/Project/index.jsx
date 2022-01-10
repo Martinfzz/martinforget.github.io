@@ -3,7 +3,9 @@ import { PropTypes } from 'prop-types';
 import { Dialog, Transition } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
 
-const Project = ({ data, open, setOpen }) => (
+const Project = ({
+  data, open, setOpen, t,
+}) => (
   <Transition.Root show={open} as={Fragment}>
     <Dialog as="div" className="fixed z-50 inset-0 overflow-y-auto" onClose={setOpen}>
       <div className="flex min-h-screen text-center md:block md:px-2 lg:px-4" style={{ fontSize: 0 }}>
@@ -44,7 +46,7 @@ const Project = ({ data, open, setOpen }) => (
 
               <div className="w-full grid grid-cols-1 gap-y-8 gap-x-6 items-start sm:grid-cols-12 lg:gap-x-8">
                 <div className="aspect-w-2 aspect-h-3 rounded-lg bg-gray-100 overflow-hidden sm:col-span-4 lg:col-span-5">
-                  <img src={data.imageSrc} alt={data.imageAlt} className="object-center object-cover" />
+                  <img src={data.imageSrc} alt={t(`${data.imageAlt}`)} className="object-center object-cover" />
                 </div>
                 <div className="sm:col-span-8 lg:col-span-7">
                   <h2 className="text-2xl font-extrabold text-gray-900 sm:pr-12">{data.name}</h2>
@@ -54,7 +56,7 @@ const Project = ({ data, open, setOpen }) => (
                       data information
                     </h3>
 
-                    <p className="text-lg text-gray-500">{data.longDescription}</p>
+                    <p className="text-lg text-gray-500">{t(`${data.longDescription}`)}</p>
                     <p className="text-lg text-gray-500">
                       Technologies:
                       {' '}
@@ -67,7 +69,7 @@ const Project = ({ data, open, setOpen }) => (
                       type="submit"
                       className="uppercase mt-6 w-full bg-yellow-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:text-white hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
                     >
-                      Website
+                      {t('Website')}
                     </button>
                   </a>
                 </div>
@@ -83,6 +85,7 @@ Project.propTypes = {
   data: PropTypes.string.isRequired,
   open: PropTypes.string.isRequired,
   setOpen: PropTypes.string.isRequired,
+  t: PropTypes.string.isRequired,
 };
 
 export default Project;

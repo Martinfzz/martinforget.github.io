@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import SkillBar from 'react-skillbars';
 
@@ -84,20 +85,14 @@ const skills = [
   },
 ];
 
-const About = () => (
+const About = ({ t }) => (
   <div className="bg-white" id="about">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none text-center">
-        <h2 className="text-4xl font-extrabold text-gray-900 uppercase">About Me</h2>
+        <h2 className="text-4xl font-extrabold text-gray-900 uppercase">{t('About Me')}</h2>
         <div className="mt-10 max-w-2xl text-xl text-gray-500 mx-auto">
           <p className="mb-20">
-            I&apos;m a Fullstack web developper.
-            {' '}
-            I worked for few years into aeronautical engineering field
-            {' '}
-            Possimus magnam voluptatum cupiditate veritatis in
-            {' '}
-            accusamus quisquam.
+            {t("I'm a Fullstack web developper. I worked for few years into aeronautical engineering field. I would like to help people create their future.")}
           </p>
           <SkillBar skills={skills} animationDelay={500} />
         </div>

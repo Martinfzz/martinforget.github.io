@@ -9,7 +9,7 @@ const projects = [
   {
     name: 'The Kitten Projet',
     description: 'Buy kitten pictures',
-    longDescription: 'The Kitten Project is a web application where you can buy pictures of small cats. You can singin, login, receive mails and proceed to payment.',
+    longDescription: 'The Kitten Project is a web application where you can buy pictures of small cats. You can signin, login, receive mails and proceed to payment.',
     technologies: 'Ruby On Rails, DeviseJWT, Stripe, Mailer, API, Heroku',
     href: 'https://kitten-picture-eshop.herokuapp.com/',
     imageSrc: Kitten,
@@ -27,7 +27,7 @@ const projects = [
   {
     name: 'ImmoCoin',
     description: 'Find the house of your dreams',
-    longDescription: 'ImmoCoin is a web application where you can search for real estate. You can filter your research, login. As a real estate agent, you can create an property ad.',
+    longDescription: 'ImmoCoin is a web application where you can search for real estate. You can filter your research, login. As a real estate agent, you can create a property ad.',
     technologies: 'Ruby On Rails, React, Redux, Cookies, Axios, DeviseJWT, Mailer, API, Vercel',
     href: 'https://react-immo-coin.vercel.app/',
     imageSrc: ImmoCoin,
@@ -68,7 +68,7 @@ const Portfolio = ({ t }) => {
                   <div className="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
                     <img
                       src={project.imageSrc}
-                      alt={project.imageAlt}
+                      alt={t(`${project.imageAlt}`)}
                       className="w-full h-full object-center object-cover"
                     />
                   </div>
@@ -85,7 +85,7 @@ const Portfolio = ({ t }) => {
           </div>
         </div>
       </div>
-      <Project data={selectedProject} open={open} setOpen={setOpen} />
+      <Project data={selectedProject} open={open} setOpen={setOpen} t={t} />
     </>
   );
 };
