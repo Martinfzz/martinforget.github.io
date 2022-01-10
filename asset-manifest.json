@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.fa960030.chunk.css",
-    "main.js": "/portfolio/static/js/main.5167a4c5.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.5167a4c5.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.fdad1b53.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.fdad1b53.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.a9f76519.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.a9f76519.js.map",
     "static/css/2.3fd7655f.chunk.css": "/portfolio/static/css/2.3fd7655f.chunk.css",
-    "static/js/2.41fab5bf.chunk.js": "/portfolio/static/js/2.41fab5bf.chunk.js",
-    "static/js/2.41fab5bf.chunk.js.map": "/portfolio/static/js/2.41fab5bf.chunk.js.map",
+    "static/js/2.72d13fd4.chunk.js": "/portfolio/static/js/2.72d13fd4.chunk.js",
+    "static/js/2.72d13fd4.chunk.js.map": "/portfolio/static/js/2.72d13fd4.chunk.js.map",
     "index.html": "/portfolio/index.html",
     "static/css/2.3fd7655f.chunk.css.map": "/portfolio/static/css/2.3fd7655f.chunk.css.map",
     "static/css/main.fa960030.chunk.css.map": "/portfolio/static/css/main.fa960030.chunk.css.map",
-    "static/js/2.41fab5bf.chunk.js.LICENSE.txt": "/portfolio/static/js/2.41fab5bf.chunk.js.LICENSE.txt",
+    "static/js/2.72d13fd4.chunk.js.LICENSE.txt": "/portfolio/static/js/2.72d13fd4.chunk.js.LICENSE.txt",
     "static/media/Martin_Forget_logo.2d42e4ba.png": "/portfolio/static/media/Martin_Forget_logo.2d42e4ba.png",
     "static/media/style.scss": "/portfolio/static/media/Raleway-SemiBold.243af299.ttf",
     "static/media/getABand.6f18bd1f.png": "/portfolio/static/media/getABand.6f18bd1f.png",
@@ -23,8 +23,8 @@
   "entrypoints": [
     "static/js/runtime-main.a9f76519.js",
     "static/css/2.3fd7655f.chunk.css",
-    "static/js/2.41fab5bf.chunk.js",
+    "static/js/2.72d13fd4.chunk.js",
     "static/css/main.fa960030.chunk.css",
-    "static/js/main.5167a4c5.chunk.js"
+    "static/js/main.fdad1b53.chunk.js"
   ]
 }
