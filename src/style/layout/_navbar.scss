@@ -1,0 +1,32 @@
+nav {
+  & .navbar-link {
+    position: relative;
+    &:after {
+      content: '';
+      height: 2px;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 0%;
+      background-color: #B45309;
+      transition: 0.2s;
+    }
+    &:hover:after {
+      width: 100%;
+    }
+  }
+
+  & .active {
+    color: #B45309;
+    &:after {
+      content: '';
+      height: 2px;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      background-color: #B45309;
+      transition: 0.2s;
+    }
+  }
+}
