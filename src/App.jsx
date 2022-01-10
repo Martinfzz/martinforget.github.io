@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './style/style.scss';
 import { withNamespaces } from 'react-i18next';
 import Navbar from './Components/Navbar';
@@ -11,11 +11,9 @@ const App = ({ t }) => (
   <Router>
     <Navbar t={t} />
     <main>
-      <Switch>
-        <Route path="/" exact>
-          <Home t={t} />
-        </Route>
-      </Switch>
+
+      <Home t={t} />
+
     </main>
     <Footer />
   </Router>
