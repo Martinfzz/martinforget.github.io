@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.fa960030.chunk.css",
+    "main.js": "/portfolio/static/js/main.5167a4c5.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.5167a4c5.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.a9f76519.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.a9f76519.js.map",
+    "static/css/2.3fd7655f.chunk.css": "/portfolio/static/css/2.3fd7655f.chunk.css",
+    "static/js/2.41fab5bf.chunk.js": "/portfolio/static/js/2.41fab5bf.chunk.js",
+    "static/js/2.41fab5bf.chunk.js.map": "/portfolio/static/js/2.41fab5bf.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/2.3fd7655f.chunk.css.map": "/portfolio/static/css/2.3fd7655f.chunk.css.map",
+    "static/css/main.fa960030.chunk.css.map": "/portfolio/static/css/main.fa960030.chunk.css.map",
+    "static/js/2.41fab5bf.chunk.js.LICENSE.txt": "/portfolio/static/js/2.41fab5bf.chunk.js.LICENSE.txt",
+    "static/media/Martin_Forget_logo.2d42e4ba.png": "/portfolio/static/media/Martin_Forget_logo.2d42e4ba.png",
+    "static/media/style.scss": "/portfolio/static/media/Raleway-SemiBold.243af299.ttf",
+    "static/media/getABand.6f18bd1f.png": "/portfolio/static/media/getABand.6f18bd1f.png",
+    "static/media/glucicalc.c8b90f8c.png": "/portfolio/static/media/glucicalc.c8b90f8c.png",
+    "static/media/immocoin.17189e48.png": "/portfolio/static/media/immocoin.17189e48.png",
+    "static/media/kitten_project.6b9ce610.png": "/portfolio/static/media/kitten_project.6b9ce610.png",
+    "static/media/profile_picture.550c61a2.jpg": "/portfolio/static/media/profile_picture.550c61a2.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a9f76519.js",
+    "static/css/2.3fd7655f.chunk.css",
+    "static/js/2.41fab5bf.chunk.js",
+    "static/css/main.fa960030.chunk.css",
+    "static/js/main.5167a4c5.chunk.js"
+  ]
+}
